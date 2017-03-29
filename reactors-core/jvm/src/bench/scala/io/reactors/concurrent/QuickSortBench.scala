@@ -29,7 +29,7 @@ class QuickSortBench extends JBench.OfflineReport {
     new MongoDbReporter[Double]
   )
 
-  val lists: Gen[List[Long]] = Gen.range("size")(1000000, 10000000, 1000000).map(QuickSortConfig.randomlyInitArray(_))
+  val lists: Gen[List[Long]] = Gen.range("size")(1000000, 1000000, 1000000).map(QuickSortConfig.randomlyInitArray(_))
 
   @transient lazy val system = new ReactorSystem("reactor-bench")
 
